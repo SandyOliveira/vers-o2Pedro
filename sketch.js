@@ -20,7 +20,7 @@ function setup(){
   ground.addImage("ground",groundIMG);
   
   ground.x = ground.width /2;
-  ground.velocityX = -4;
+  ground.velocityX = -5;
   ground.shapeColor = "red";
 
   //profundidade
@@ -62,10 +62,10 @@ function draw(){
 
 
 function gerarObstaculos() {
-  if(frameCount % 90 === 0) {
-    obstaculo = createSprite(600,height-90,40,10);
-    obstaculo.y = Math.round(random(100,height-120));
-    obstaculo.velocityY = 3;
+  if(frameCount % 60 === 0) {
+   obstaculo = createSprite(600,100,40,10);
+   obstaculo.x = Math.round(random(0,1000));
+    obstaculo.velocityY = 7;
     
     //gerar obstáculos aleatórios
     //var rand = Math.round(random(1,4));
